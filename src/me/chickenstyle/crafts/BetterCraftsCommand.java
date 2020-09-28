@@ -110,7 +110,7 @@ public class BetterCraftsCommand implements CommandExecutor {
 			sender.sendMessage(Utils.color("&7use /bc help"));
 		}
 		
-		return false;
+		return true;
 	}
 
 }

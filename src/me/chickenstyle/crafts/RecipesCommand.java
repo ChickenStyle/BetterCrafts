@@ -16,6 +16,7 @@ public class RecipesCommand implements CommandExecutor {
 			Player player = (Player) sender;
 			if (player.hasPermission("BetterCrafts.Admin") || player.hasPermission("BetterCrafts.recipes")) {
 				new RecipesGUI(player, AltarCrafts.getRecipes(), 1);
+				return true;
 			}
 		}
 		return false;
