@@ -40,7 +40,7 @@ public class BetterCraftsCommand implements CommandExecutor {
 				sender.sendMessage("");
 				sender.sendMessage(Utils.color("&7> &f/bc addrecipe   &7//Command to add new recipe"));
 				sender.sendMessage("");
-				sender.sendMessage(Utils.color("&7> &f/bc giverecipe   &7//Command to give result recipe to player"));
+				sender.sendMessage(Utils.color("&7> &f/bc giveitem   &7//Command to give result recipe to player"));
 				sender.sendMessage("");
 				sender.sendMessage(Utils.color("&7> &f/bc reload   &7//Command to reload the configs"));
 				sender.sendMessage("");
@@ -50,29 +50,32 @@ public class BetterCraftsCommand implements CommandExecutor {
 			// /bcs giveItem {player} {id}
 			case "giveitem":
 				if (sender.hasPermission("BetterCrafts.Admin") || sender.hasPermission("BetterCrafts.giveItem")) {
-					if (Bukkit.getServer().getPlayer(args[1]) != null) {
-						try {
-							Player player = Bukkit.getServer().getPlayer(args[1]);
-							int id = Integer.valueOf(args[2]);
-							if (AltarCrafts.hasRecipe(id)) {
-								Recipe recipe = AltarCrafts.getRecipe(id);
-								if (player.getInventory().firstEmpty() != -1) {
-									player.getInventory().addItem(recipe.getResult());
+					if (args.length == 3) {
+						if (Bukkit.getServer().getPlayer(args[1]) != null) {
+							try {
+								Player player = Bukkit.getServer().getPlayer(args[1]);
+								int id = Integer.valueOf(args[2]);
+								if (AltarCrafts.hasRecipe(id)) {
+									Recipe recipe = AltarCrafts.getRecipe(id);
+									if (player.getInventory().firstEmpty() != -1) {
+										player.getInventory().addItem(recipe.getResult());
+									} else {
+										player.getLocation().getWorld().dropItemNaturally(player.getLocation(), recipe.getResult());
+									}
 								} else {
-									player.getLocation().getWorld().dropItemNaturally(player.getLocation(), recipe.getResult());
+									sender.sendMessage(Utils.color("&cNo recipe with this id!"));
 								}
-							} else {
-								sender.sendMessage(Utils.color("&cNo recipe with this id!"));
+								
+							} catch(Exception e) {
+								sender.sendMessage(Utils.color("&cInvalid ID"));
 							}
-							
-						} catch(Exception e) {
-							sender.sendMessage(Utils.color("&cInvalid ID"));
+						} else {
+							sender.sendMessage(Utils.color("&cPlayer isn't online!"));
 						}
 					} else {
-						sender.sendMessage(Utils.color("&cPlayer isn't online!"));
+						sender.sendMessage(Utils.color("&7Invalid usage!"));
+						sender.sendMessage(Utils.color("&7use '/bc giveitem {player} {recipe_id}'"));
 					}
-					
-					
 					
 				}
 			break;
