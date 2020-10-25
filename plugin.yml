@@ -1,8 +1,8 @@
 name: BetterCrafts
 main: me.chickenstyle.crafts.Main
 description: adds a new way to craft items!
-api-version: 1.15
-version: 1.0.3
+api-version: 1.13
+version: 1.0.4
 author: ChickenStyle
 commands:
   bettercrafts:
