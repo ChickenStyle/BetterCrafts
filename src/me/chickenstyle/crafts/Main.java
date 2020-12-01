@@ -23,6 +23,7 @@ import me.chickenstyle.crafts.versions.Handler_1_14_R1;
 import me.chickenstyle.crafts.versions.Handler_1_15_R1;
 import me.chickenstyle.crafts.versions.Handler_1_16_R1;
 import me.chickenstyle.crafts.versions.Handler_1_16_R2;
+import me.chickenstyle.crafts.versions.Handler_1_16_R3;
 import me.chickenstyle.crafts.versions.Handler_1_8_R1;
 import me.chickenstyle.crafts.versions.Handler_1_8_R2;
 import me.chickenstyle.crafts.versions.Handler_1_8_R3;
@@ -51,6 +52,7 @@ public class Main extends JavaPlugin{
 	    saveDefaultConfig();
 		new AltarCrafts(this);
 		saveResource("lang.yml", false);
+		
 		
 		//Check server version
 		if (getServerVersion() == false) {
@@ -133,6 +135,10 @@ public class Main extends JavaPlugin{
 		
 		case "v1_16_R2":
 			versionHandler = new Handler_1_16_R2();
+		break;
+		
+		case "v1_16_R3":
+			versionHandler = new Handler_1_16_R3();
 		break;
 		
 		default:

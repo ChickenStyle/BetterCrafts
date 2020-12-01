@@ -8,8 +8,8 @@ import org.bukkit.inventory.ItemStack;
 
 import me.chickenstyle.crafts.NMSHandler;
 import net.minecraft.server.v1_11_R1.EnumParticle;
-import net.minecraft.server.v1_11_R1.PacketPlayOutWorldParticles;
 import net.minecraft.server.v1_11_R1.NBTTagCompound;
+import net.minecraft.server.v1_11_R1.PacketPlayOutWorldParticles;
 
 public class Handler_1_11_R1 implements NMSHandler{
 	
