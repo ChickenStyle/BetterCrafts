@@ -1,0 +1,60 @@
+messages:
+  noPermCommand: "&4You dont have permission to use this command!"
+  noPermCraft: "&cYou dont have permission to craft this item!"
+
+items:
+  # /recipes item
+  recipes:
+    itemName: "&6{amount} &7x &6{item}"
+    hasPermission: "&aYou have permission to craft this item!"
+    noPermission: "&cYou dont have permission to craft this item!"
+    itemLore:
+    - "&7Click on this item"
+    - "&7to see it's recipe!"
+    - " "
+    - "{checkPermission}"
+    
+  #/bc addrecipe items 
+  id:
+    itemName: "&7Item's ID!"
+    itemLore:
+    - "&8Click in the item"
+    - "&8to add an id for the"
+    - "&8recipe"
+    - " "
+    - "&7Current ID: &6{id}"
+  permission:
+    itemName: "&7Click to turn &aon&7/&coff &7permission"
+    itemLore:
+    - "&8If you want this recipe to be"
+    - "&8with permission the block"
+    - "&8should be emerald block!"
+    - " "
+    - "&8if not - redstone block"
+  animation:
+    itemName: "&7Click to change recipe's animation"
+    itemLore:
+    - "&8Current Animation:"
+    - "&6{animation}"
+  result:
+    itemName: "&7Click to set the result item!"
+    itemLore:
+    - "&8Current Result Item:"
+    - "&6{resultAmount} &7x &6{resultItem}"
+  triggerItem:
+    itemName: "&7Click to set recipe's trigger item!"
+    itemLore:
+    - "&8Trigger Item = The item that"
+    - "&8you have to click on altar to"
+    - "&8the craft the item!"
+    - " "
+    - "&8Current Trigger Item:"
+    - "&6{triggerAmount} &7x &6{triggerItem}"
+  ingredients:
+    itemName: "&7Click to set recipe's ingredients"
+    itemLore:
+    - "&cDont put duplicate items in the"
+    - "&cingredients, otherwise the recipe"
+    - "&4WONT WORK!"
+    
+  

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BetterCrafts:jar">
+    <output-path>D:/Test Servers/Test Server 1.17/plugins</output-path>
+    <root id="archive" name="BetterCrafts.jar">
+      <element id="module-output" name="BetterCrafts" />
+    </root>
+  </artifact>
+</component>

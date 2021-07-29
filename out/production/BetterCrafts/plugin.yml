@@ -1,0 +1,14 @@
+name: BetterCrafts
+main: me.chickenstyle.crafts.Main
+description: adds a new way to craft items!
+api-version: 1.13
+version: 1.0.6
+author: ChickenStyle
+commands:
+  bettercrafts:
+    aliases: bc
+    description: command
+  recipes:
+    description: command
+
+  

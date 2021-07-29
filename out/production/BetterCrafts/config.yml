@@ -1,0 +1,18 @@
+altarBlock: 'ENCHANTING_TABLE'
+
+craftCooldown: 7
+
+animations:
+  EXPLOSION:
+    particle: EXPLOSION_LARGE
+    sound: EXPLODE
+
+  SPINNING:
+    particleAround: FLAME
+    
+  FIREBALL:
+    fireballParticle: FLAME
+    spinningSound: FIRE
+    explodeParticle: EXPLOSION_LARGE
+    explodeSound: EXPLODE
+    itemDropSound: ARROW_HIT
